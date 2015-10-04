@@ -13,6 +13,15 @@ book = Spreadsheet.open './posts_data.xls'
 
 sheet1 = book.worksheet 0
 
+# Sanitize.document(sheet1,
+# :allow_doctype => true,
+# :elements => ['html']
+# )
+
+
+
+
+
 sheet1.each do |row|
   post_info = {}
     post_info[:date] = row[4]
